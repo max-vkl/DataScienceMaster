@@ -1,2 +1,2 @@
 # DataScienceMaster
-Coursework from the Master of Data Science at the UB
+Coursework from the Master of Data Science 

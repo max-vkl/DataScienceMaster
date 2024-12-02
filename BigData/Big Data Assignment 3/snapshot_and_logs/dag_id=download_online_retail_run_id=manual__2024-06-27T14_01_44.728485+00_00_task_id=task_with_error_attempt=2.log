@@ -1,0 +1,29 @@
+e6a3248c0727
+*** Found local files:
+***   * /opt/airflow/logs/dag_id=download_online_retail/run_id=manual__2024-06-27T14:01:44.728485+00:00/task_id=task_with_error/attempt=2.log
+[2024-06-27T14:03:13.778+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: download_online_retail.task_with_error manual__2024-06-27T14:01:44.728485+00:00 [queued]>
+[2024-06-27T14:03:13.949+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: download_online_retail.task_with_error manual__2024-06-27T14:01:44.728485+00:00 [queued]>
+[2024-06-27T14:03:13.949+0000] {taskinstance.py:1331} INFO - Starting attempt 2 of 2
+[2024-06-27T14:03:13.961+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): task_with_error> on 2024-06-27 14:01:44.728485+00:00
+[2024-06-27T14:03:13.971+0000] {standard_task_runner.py:57} INFO - Started process 122 to run task
+[2024-06-27T14:03:13.976+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'download_online_retail', 'task_with_error', 'manual__2024-06-27T14:01:44.728485+00:00', '--job-id', '533', '--raw', '--subdir', 'DAGS_FOLDER/OnlineRetailAnalysize.py', '--cfg-path', '/tmp/tmpnmayiu7b']
+[2024-06-27T14:03:13.977+0000] {standard_task_runner.py:85} INFO - Job 533: Subtask task_with_error
+[2024-06-27T14:03:14.017+0000] {task_command.py:410} INFO - Running <TaskInstance: download_online_retail.task_with_error manual__2024-06-27T14:01:44.728485+00:00 [running]> on host e6a3248c0727
+[2024-06-27T14:03:14.065+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='jfcplayer66@googlemail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='download_online_retail' AIRFLOW_CTX_TASK_ID='task_with_error' AIRFLOW_CTX_EXECUTION_DATE='2024-06-27T14:01:44.728485+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-27T14:01:44.728485+00:00'
+[2024-06-27T14:03:14.067+0000] {taskinstance.py:1847} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/OnlineRetailAnalysize.py", line 28, in throw_error
+    raise Exception("Example exception to simulate failure. You should see the mail error description and link to the Log of the task in the Airflow UI.")
+Exception: Example exception to simulate failure. You should see the mail error description and link to the Log of the task in the Airflow UI.
+[2024-06-27T14:03:14.072+0000] {taskinstance.py:1373} INFO - Marking task as FAILED. dag_id=download_online_retail, task_id=task_with_error, execution_date=20240627T140144, start_date=20240627T140313, end_date=20240627T140314
+[2024-06-27T14:03:14.081+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/email.py:152: RemovedInAirflow3Warning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+  send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+[2024-06-27T14:03:14.082+0000] {email.py:268} INFO - Email alerting: attempt 1
+[2024-06-27T14:03:14.466+0000] {email.py:280} INFO - Sent an alert email to ['jfcplayer66@googlemail.com']
+[2024-06-27T14:03:15.249+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 533 for task task_with_error (Example exception to simulate failure. You should see the mail error description and link to the Log of the task in the Airflow UI.; 122)
+[2024-06-27T14:03:15.298+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 1
+[2024-06-27T14:03:15.318+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check

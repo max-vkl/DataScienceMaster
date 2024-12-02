@@ -1,0 +1,5 @@
+Grades for Deep Learning
+
+Assignment 1: 9/10
+Assignment 2: 10/10
+Assignment 3: 9.5/10

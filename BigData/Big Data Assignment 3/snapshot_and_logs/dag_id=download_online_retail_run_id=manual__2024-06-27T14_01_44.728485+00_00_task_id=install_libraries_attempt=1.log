@@ -1,0 +1,33 @@
+e6a3248c0727
+*** Found local files:
+***   * /opt/airflow/logs/dag_id=download_online_retail/run_id=manual__2024-06-27T14:01:44.728485+00:00/task_id=install_libraries/attempt=1.log
+[2024-06-27T14:01:45.861+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: download_online_retail.install_libraries manual__2024-06-27T14:01:44.728485+00:00 [queued]>
+[2024-06-27T14:01:45.994+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: download_online_retail.install_libraries manual__2024-06-27T14:01:44.728485+00:00 [queued]>
+[2024-06-27T14:01:45.994+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 2
+[2024-06-27T14:01:46.002+0000] {taskinstance.py:1350} INFO - Executing <Task(BashOperator): install_libraries> on 2024-06-27 14:01:44.728485+00:00
+[2024-06-27T14:01:46.005+0000] {standard_task_runner.py:57} INFO - Started process 66 to run task
+[2024-06-27T14:01:46.008+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'download_online_retail', 'install_libraries', 'manual__2024-06-27T14:01:44.728485+00:00', '--job-id', '526', '--raw', '--subdir', 'DAGS_FOLDER/OnlineRetailAnalysize.py', '--cfg-path', '/tmp/tmp_m4g3xao']
+[2024-06-27T14:01:46.008+0000] {standard_task_runner.py:85} INFO - Job 526: Subtask install_libraries
+[2024-06-27T14:01:46.037+0000] {task_command.py:410} INFO - Running <TaskInstance: download_online_retail.install_libraries manual__2024-06-27T14:01:44.728485+00:00 [running]> on host e6a3248c0727
+[2024-06-27T14:01:46.076+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='jfcplayer66@googlemail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='download_online_retail' AIRFLOW_CTX_TASK_ID='install_libraries' AIRFLOW_CTX_EXECUTION_DATE='2024-06-27T14:01:44.728485+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-27T14:01:44.728485+00:00'
+[2024-06-27T14:01:46.078+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2024-06-27T14:01:46.079+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'pip install ucimlrepo pymongo']
+[2024-06-27T14:01:46.083+0000] {subprocess.py:86} INFO - Output:
+[2024-06-27T14:01:46.498+0000] {subprocess.py:93} INFO - Defaulting to user installation because normal site-packages is not writeable
+[2024-06-27T14:01:46.573+0000] {subprocess.py:93} INFO - Requirement already satisfied: ucimlrepo in /home/***/.local/lib/python3.7/site-packages (0.0.7)
+[2024-06-27T14:01:46.573+0000] {subprocess.py:93} INFO - Requirement already satisfied: pymongo in /home/***/.local/lib/python3.7/site-packages (4.7.3)
+[2024-06-27T14:01:46.575+0000] {subprocess.py:93} INFO - Requirement already satisfied: pandas>=1.0.0 in /home/***/.local/lib/python3.7/site-packages (from ucimlrepo) (1.3.5)
+[2024-06-27T14:01:46.575+0000] {subprocess.py:93} INFO - Requirement already satisfied: certifi>=2020.12.5 in /home/***/.local/lib/python3.7/site-packages (from ucimlrepo) (2022.12.7)
+[2024-06-27T14:01:46.586+0000] {subprocess.py:93} INFO - Requirement already satisfied: dnspython<3.0.0,>=1.16.0 in /home/***/.local/lib/python3.7/site-packages (from pymongo) (2.3.0)
+[2024-06-27T14:01:46.599+0000] {subprocess.py:93} INFO - Requirement already satisfied: python-dateutil>=2.7.3 in /home/***/.local/lib/python3.7/site-packages (from pandas>=1.0.0->ucimlrepo) (2.8.2)
+[2024-06-27T14:01:46.600+0000] {subprocess.py:93} INFO - Requirement already satisfied: pytz>=2017.3 in /home/***/.local/lib/python3.7/site-packages (from pandas>=1.0.0->ucimlrepo) (2023.3)
+[2024-06-27T14:01:46.600+0000] {subprocess.py:93} INFO - Requirement already satisfied: numpy>=1.19.2 in /home/***/.local/lib/python3.7/site-packages (from pandas>=1.0.0->ucimlrepo) (1.21.6)
+[2024-06-27T14:01:46.602+0000] {subprocess.py:93} INFO - Requirement already satisfied: six>=1.5 in /home/***/.local/lib/python3.7/site-packages (from python-dateutil>=2.7.3->pandas>=1.0.0->ucimlrepo) (1.16.0)
+[2024-06-27T14:01:49.105+0000] {subprocess.py:93} INFO - 
+[2024-06-27T14:01:49.106+0000] {subprocess.py:93} INFO - [notice] A new release of pip is available: 23.1.2 -> 24.0
+[2024-06-27T14:01:49.106+0000] {subprocess.py:93} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2024-06-27T14:01:49.175+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-06-27T14:01:49.193+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=download_online_retail, task_id=install_libraries, execution_date=20240627T140144, start_date=20240627T140145, end_date=20240627T140149
+[2024-06-27T14:01:49.236+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2024-06-27T14:01:49.253+0000] {taskinstance.py:2674} INFO - 1 downstream tasks scheduled from follow-on schedule check

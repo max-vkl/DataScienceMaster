@@ -1,0 +1,18 @@
+e6a3248c0727
+*** Found local files:
+***   * /opt/airflow/logs/dag_id=download_online_retail/run_id=manual__2024-06-27T14:01:44.728485+00:00/task_id=transform_data_task/attempt=1.log
+[2024-06-27T14:02:02.777+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: download_online_retail.transform_data_task manual__2024-06-27T14:01:44.728485+00:00 [queued]>
+[2024-06-27T14:02:02.865+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: download_online_retail.transform_data_task manual__2024-06-27T14:01:44.728485+00:00 [queued]>
+[2024-06-27T14:02:02.865+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 2
+[2024-06-27T14:02:02.872+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): transform_data_task> on 2024-06-27 14:01:44.728485+00:00
+[2024-06-27T14:02:02.875+0000] {standard_task_runner.py:57} INFO - Started process 80 to run task
+[2024-06-27T14:02:02.877+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'download_online_retail', 'transform_data_task', 'manual__2024-06-27T14:01:44.728485+00:00', '--job-id', '529', '--raw', '--subdir', 'DAGS_FOLDER/OnlineRetailAnalysize.py', '--cfg-path', '/tmp/tmp6_k7uocc']
+[2024-06-27T14:02:02.878+0000] {standard_task_runner.py:85} INFO - Job 529: Subtask transform_data_task
+[2024-06-27T14:02:02.902+0000] {task_command.py:410} INFO - Running <TaskInstance: download_online_retail.transform_data_task manual__2024-06-27T14:01:44.728485+00:00 [running]> on host e6a3248c0727
+[2024-06-27T14:02:02.938+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='jfcplayer66@googlemail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='download_online_retail' AIRFLOW_CTX_TASK_ID='transform_data_task' AIRFLOW_CTX_EXECUTION_DATE='2024-06-27T14:01:44.728485+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-27T14:01:44.728485+00:00'
+[2024-06-27T14:02:02.939+0000] {logging_mixin.py:149} INFO - Adding Total Price Column...
+[2024-06-27T14:02:03.901+0000] {logging_mixin.py:149} INFO - Transformed data saved to data/Online_Retail_features_transformed.csv
+[2024-06-27T14:02:03.904+0000] {python.py:183} INFO - Done. Returned value was: None
+[2024-06-27T14:02:03.909+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=download_online_retail, task_id=transform_data_task, execution_date=20240627T140144, start_date=20240627T140202, end_date=20240627T140203
+[2024-06-27T14:02:03.972+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2024-06-27T14:02:03.987+0000] {taskinstance.py:2674} INFO - 1 downstream tasks scheduled from follow-on schedule check

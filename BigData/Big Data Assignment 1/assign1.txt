@@ -1,0 +1,23 @@
+Groups:
+Max van Klinski
+Simon Stephan
+
+Docker Image Link (of the python app):
+https://hub.docker.com/r/stemmen2/bigdata1-python-app
+
+
+def send_alert_email(context):
+    """
+    Function to send an alert email on task failure.
+    """
+    dag_id = context['dag'].dag_id
+    task_id = context['task_instance'].task_id
+    execution_date = context['execution_date']
+    error_message = context['exception']
+
+    subject = f"Airflow Alert: Task Failed ({task_id}) in DAG ({dag_id})"
+    body = f"Task {task_id} failed in DAG {dag_id} on {execution_date}.\n\n"
+    body += f"Error message: {error_message}\n\n"
+    body += "Log: " + context['task_instance'].log_url
+
+    send_email('jfcplayer66@googlemail.com', subject, body)

@@ -1,0 +1,4 @@
+Grades for Natural Language Processing
+
+Assignment 1: 9.5/10
+Assignment 2: 9.5/10

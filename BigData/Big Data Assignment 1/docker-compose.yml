@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  mongo:
+    image: mongo
+    container_name: my-mongodb
+    ports:
+      - "27017:27017"  # Expose MongoDB port
+    volumes:
+      - mongo-data:/data/db  # Volume for MongoDB data
+
+  python-app:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: bigD_ass1_container
+    # this volume is for a better flow during implementation
+    volumes:
+      - ./code:/usr/src/app/
+    environment:
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      - mongo  # Ensure that the MongoDB service is started before the Python service
+
+volumes:
+  mongo-data:  # Define the volume for MongoDB data

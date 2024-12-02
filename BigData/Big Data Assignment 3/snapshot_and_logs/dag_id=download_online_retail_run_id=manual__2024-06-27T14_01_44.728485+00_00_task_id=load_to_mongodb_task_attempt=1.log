@@ -1,0 +1,17 @@
+e6a3248c0727
+*** Found local files:
+***   * /opt/airflow/logs/dag_id=download_online_retail/run_id=manual__2024-06-27T14:01:44.728485+00:00/task_id=load_to_mongodb_task/attempt=1.log
+[2024-06-27T14:02:04.909+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: download_online_retail.load_to_mongodb_task manual__2024-06-27T14:01:44.728485+00:00 [queued]>
+[2024-06-27T14:02:04.987+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: download_online_retail.load_to_mongodb_task manual__2024-06-27T14:01:44.728485+00:00 [queued]>
+[2024-06-27T14:02:04.987+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 2
+[2024-06-27T14:02:04.994+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): load_to_mongodb_task> on 2024-06-27 14:01:44.728485+00:00
+[2024-06-27T14:02:04.997+0000] {standard_task_runner.py:57} INFO - Started process 83 to run task
+[2024-06-27T14:02:04.999+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'download_online_retail', 'load_to_mongodb_task', 'manual__2024-06-27T14:01:44.728485+00:00', '--job-id', '530', '--raw', '--subdir', 'DAGS_FOLDER/OnlineRetailAnalysize.py', '--cfg-path', '/tmp/tmpuje2mea9']
+[2024-06-27T14:02:04.999+0000] {standard_task_runner.py:85} INFO - Job 530: Subtask load_to_mongodb_task
+[2024-06-27T14:02:05.023+0000] {task_command.py:410} INFO - Running <TaskInstance: download_online_retail.load_to_mongodb_task manual__2024-06-27T14:01:44.728485+00:00 [running]> on host e6a3248c0727
+[2024-06-27T14:02:05.068+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='jfcplayer66@googlemail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='download_online_retail' AIRFLOW_CTX_TASK_ID='load_to_mongodb_task' AIRFLOW_CTX_EXECUTION_DATE='2024-06-27T14:01:44.728485+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-27T14:01:44.728485+00:00'
+[2024-06-27T14:02:09.242+0000] {logging_mixin.py:149} INFO - Transformed data loaded into MongoDB collection 'online_retail'
+[2024-06-27T14:02:09.296+0000] {python.py:183} INFO - Done. Returned value was: None
+[2024-06-27T14:02:09.305+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=download_online_retail, task_id=load_to_mongodb_task, execution_date=20240627T140144, start_date=20240627T140204, end_date=20240627T140209
+[2024-06-27T14:02:09.329+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2024-06-27T14:02:09.354+0000] {taskinstance.py:2674} INFO - 1 downstream tasks scheduled from follow-on schedule check

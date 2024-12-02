@@ -1,0 +1,28 @@
+e6a3248c0727
+*** Found local files:
+***   * /opt/airflow/logs/dag_id=download_online_retail/run_id=manual__2024-06-27T14:01:44.728485+00:00/task_id=clean_data_task/attempt=1.log
+[2024-06-27T14:01:59.817+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: download_online_retail.clean_data_task manual__2024-06-27T14:01:44.728485+00:00 [queued]>
+[2024-06-27T14:01:59.895+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: download_online_retail.clean_data_task manual__2024-06-27T14:01:44.728485+00:00 [queued]>
+[2024-06-27T14:01:59.895+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 2
+[2024-06-27T14:01:59.902+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): clean_data_task> on 2024-06-27 14:01:44.728485+00:00
+[2024-06-27T14:01:59.905+0000] {standard_task_runner.py:57} INFO - Started process 77 to run task
+[2024-06-27T14:01:59.907+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'download_online_retail', 'clean_data_task', 'manual__2024-06-27T14:01:44.728485+00:00', '--job-id', '528', '--raw', '--subdir', 'DAGS_FOLDER/OnlineRetailAnalysize.py', '--cfg-path', '/tmp/tmpqnfoqe1n']
+[2024-06-27T14:01:59.907+0000] {standard_task_runner.py:85} INFO - Job 528: Subtask clean_data_task
+[2024-06-27T14:01:59.931+0000] {task_command.py:410} INFO - Running <TaskInstance: download_online_retail.clean_data_task manual__2024-06-27T14:01:44.728485+00:00 [running]> on host e6a3248c0727
+[2024-06-27T14:01:59.969+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='jfcplayer66@googlemail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='download_online_retail' AIRFLOW_CTX_TASK_ID='clean_data_task' AIRFLOW_CTX_EXECUTION_DATE='2024-06-27T14:01:44.728485+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-27T14:01:44.728485+00:00'
+[2024-06-27T14:01:59.970+0000] {logging_mixin.py:149} INFO - Begin Cleaning Dataset...
+[2024-06-27T14:02:00.195+0000] {logging_mixin.py:149} INFO - Initial number of rows: 541909
+[2024-06-27T14:02:00.245+0000] {logging_mixin.py:149} INFO - Number of rows with missing values dropped: 135080
+[2024-06-27T14:02:00.317+0000] {logging_mixin.py:149} INFO - Number of duplicate rows dropped: 5301
+[2024-06-27T14:02:00.987+0000] {warnings.py:110} WARNING - /opt/***/dags/utils.py:40: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_deduped['InvoiceDate'] = pd.to_datetime(df_deduped['InvoiceDate'], errors='coerce')
+[2024-06-27T14:02:00.987+0000] {logging_mixin.py:149} INFO - Date conversion applied to 'InvoiceDate' column.
+[2024-06-27T14:02:01.860+0000] {logging_mixin.py:149} INFO - Number of rows after cleaning: 401528
+[2024-06-27T14:02:01.860+0000] {logging_mixin.py:149} INFO - Cleaned data saved to data/Online_Retail_features_cleaned.csv
+[2024-06-27T14:02:01.869+0000] {python.py:183} INFO - Done. Returned value was: None
+[2024-06-27T14:02:01.876+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=download_online_retail, task_id=clean_data_task, execution_date=20240627T140144, start_date=20240627T140159, end_date=20240627T140201
+[2024-06-27T14:02:01.897+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2024-06-27T14:02:01.913+0000] {taskinstance.py:2674} INFO - 1 downstream tasks scheduled from follow-on schedule check
